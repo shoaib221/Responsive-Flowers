@@ -1,0 +1,237 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --color1: #E95A08;
+    --color2: #8d8686;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    box-sizing: border-box;
+}
+
+.open-sans-a2 {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+html{
+    font-size: 16px;
+    background-color: green;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    min-width: 250px;
+    min-height: 100vh;
+    background-color: rgb(255, 255, 255);
+    padding: 2rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    overflow-y: auto;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav {
+    display: flex;
+    height: 4rem;
+}
+
+nav img {
+    height: 100%;
+    width: 7rem;
+}
+
+nav #temp {
+    display: flex;
+    gap: 1rem;
+}
+
+.text-center {
+    margin-top: auto;
+    margin-bottom: auto ;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+banner {
+    display: flex;
+    width: 100%;
+    height: 15rem;
+    
+}
+
+#banner-photo {
+    /* border: 5px solid blue; */
+    background-image: url(./assets/hero-flower.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    flex-grow: 1;
+    
+}
+
+#banner-title {
+    /* border: 5px solid red; */
+    
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    justify-content: flex-end;
+}
+
+#plants {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.plant {
+    
+}
+
+.plant-photo {
+    background-image: url(./assets/sample-flower-image.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 18rem;
+    width: 100%;
+
+}
+
+.fs1-5 {
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.btn1 {
+    background-color: var(--color1);
+    color: white;
+    width: 100%;
+    font-size: 1.2rem;
+    min-height: 2.5rem;
+}
+
+#trust {
+    position: absolute; 
+    z-index: 5; 
+    /* border: 3px solid black; */
+    right: -2rem; 
+    top: -3rem; 
+    width: 7rem; 
+    height: 7rem;
+    background-image: url(./assets/trusted-badge.png);
+    background-size: contain;
+}
+
+#lover-photo {
+    
+    margin-right: 2rem;
+    
+}
+
+#grid1 {
+    display: grid;
+    height: 25rem;
+    grid-template-areas: 
+        "leftup   right  right"
+        "leftdown right  right";
+    gap: 1rem;
+}
+
+#leftup {
+    grid-area: leftup;
+    /* border: 2px solid black; */
+    background-image: url(./assets/deal-bloom.png);
+    background-size: cover;
+    border-radius: .5rem;
+    
+}
+
+#leftdown {
+    grid-area: leftdown;
+    /* border: 2px solid black; */
+    background-image: url(./assets/deal-ana.png);
+    background-size: cover;
+    border-radius: .5rem;
+}
+
+#right {
+    grid-area: right;
+    border-radius: .5rem;
+    background-image: url(./assets/deal-zabo.png);
+    background-size: cover;
+}
+
+footer {
+    display: flex; 
+    margin-top: 5rem;
+}
+
+.small-deal {
+    height: 100%; 
+    width: 100%; 
+    background-color: rgb(0, 0, 0, .5); 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    color: white;
+    border-radius: .5rem;
+}
+
+/* ##################### Mobile ################################ */
+
+@media screen and (max-width : 800px) {
+
+    html {
+        font-size: 12px;
+    }
+
+    body {
+        padding: 1rem;
+    }
+
+    nav #temp {
+        display: none;
+    }
+
+    banner {
+        flex-direction: column-reverse;
+        height: 100%;
+    }
+
+    #banner-title {
+        max-width: 100%;
+        flex-grow: 0;
+    }
+
+    #banner-photo {
+        height: 10rem;
+    }
+
+    #plants {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #grid1 {
+        grid-template-areas: "leftup" 'leftdown' 'right';
+    }
+
+    footer {
+        flex-direction: column;
+    }
+}
