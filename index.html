@@ -10,38 +10,40 @@
 </head>
 
 
-<body class="open-sans-a2" >
-    <header>
-        <nav  >
-            <img src="./assets/logo.png">
-
-            <span style="margin-left: auto; display: flex; align-items: center; gap: 1rem;" >
-                <span id="temp" >
-                    <span>Home</span>
-                    <span>Shop</span>
-                    <span>About Us</span>
+    <body class="open-sans-a2" >
+        <header>
+            <nav>
+                <img src="./assets/logo.png">
+                
+                <span id="nav-child-1" >
+                    <span id="temp" >
+                        <span>Home</span>
+                        <span>Shop</span>
+                        <span>About Us</span>
+                    </span>
+                    <span class="text-center" >
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        Cart ($221)
+                    </span>
                 </span>
-                <span class="text-center" >
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    Cart ($221)
-                </span>
-            </span>
-        </nav>
-
-        <banner style="margin-top: 2rem;" >
-            <div id="banner-title"  >
-                <div style="font-size: 2.5rem; font-weight: 700;" >Always <span style="color: var(--color1);">Fresh Flowers</span></div>
-                <div style="font-size: 1.2rem; color: var(--color2);" >Induldge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic blooms, we offer a wide variety of fresh flowers that are perfect for any occasion. 
+            
+            </nav>
+    
+            <banner style="margin-top: 2rem;" >
+                <div id="banner-title"  >
+                    <div style="font-size: 2.5rem; font-weight: 700;" >Always <span style="color: var(--color1);">Fresh Flowers</span></div>
+                    <div class="text-101" >Induldge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic blooms, we offer a wide variety of fresh flowers that are perfect for any occasion. 
+                    </div>
                 </div>
-            </div>
-            <div id="banner-photo" ></div>
-        </banner>
-    </header>
+                <div id="banner-photo" ></div>
+            </banner>
+        </header>
 
-    <main style="width: 100%; margin-top: 5rem;" >
-        <section style="width: 100%;" >
-            <div style="margin-bottom: 1rem; text-align: center; font-size: 2rem; font-weight: 700;" ><span style="color: var(--color1);">Our</span> Plants</div>
-            <div style="margin-bottom: 1rem; margin-left: auto; margin-right: auto; width: 80%; text-align: center; font-size: 1.2rem; color: var(--color2);" >Induldge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic blooms, we offer a wide variety of fresh flowers that are perfect for any occasion.</div>
+
+        <main style="width: 100%; margin-top: 5rem;" >
+        <section class="regular" >
+            <div class="heading-101" ><span style="color: var(--color1);">Our</span> Plants</div>
+            <div class="text-101" style="margin-bottom: 1rem; margin-left: auto; margin-right: auto; width: 80%; text-align: center;" >Induldge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic blooms, we offer a wide variety of fresh flowers that are perfect for any occasion.</div>
             <div id="plants" >
 
                 <div class="plant" >
@@ -103,16 +105,15 @@
         </section>
 
 
-        <!-- lover -->
-        <section style="margin-top: 5rem; height: 25rem; display: flex;" >
-            <div id="lover-photo" style="max-width: 50%; flex-grow: 1; position: relative;" >
-                <img src="./assets/flower-store.png" style="height: 100%; width: 100%;">
+        <section id="lover" class="regular" >
+            <div id="lover-photo"   >
+                <img src="./assets/flower-store.png"  >
                 <div id="trust" ></div>
             </div>
             
-            <div style="max-width: 50%; flex-grow: 1;" >
+            <div id="lover-list"  >
                 <div style="font-size: 2rem; font-weight: 700;" >Flower & Plants Lover</div>
-                <ul>
+                <ul style="padding-left: 1rem;" >
                     <li style="color: var(--color2); margin-bottom: .5rem;" >Induldge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic blooms, we offer a wide variety of fresh flowers that are perfect for any occasion.</li>
                     <li style="color: var(--color2); margin-bottom: .5rem;" >Induldge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic blooms, we offer a wide variety of fresh flowers that are perfect for any occasion.</li>
                     <li style="color: var(--color2); margin-bottom: .5rem;" >Induldge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic blooms, we offer a wide variety of fresh flowers that are perfect for any occasion.</li>
@@ -121,8 +122,7 @@
         </section>
 
 
-        <!-- latest deals -->
-        <section style="margin-top: 5rem;" >  
+        <section style="margin-top: 5rem;" class="regular">  
             <div style="font-size: 2rem; font-weight: 700; text-align: center; margin-bottom: 1rem;" ><span style="color: var(--color1);">Latest</span> Deals </div>
             <div style="color: var(--color2); width: 80%; text-align: center; margin-left: auto; margin-right: auto; margin-bottom: 1rem;" > Induldge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic blooms, we offer a wide variety of fresh flowers that are perfect for any occasion. </div>
 
@@ -150,14 +150,41 @@
             </div>
         </section>
 
-        <!-- join -->
-        <section style="flex-direction: column; display: flex; justify-content: center; align-items: center; margin-top: 5rem; height: 25rem; background-image: url(./assets/news-letter-bg.png); background-size: cover;" >  
-            <div style="color: white; font-size: 2rem; font-weight: 700;" > Join The Colorful Bunch </div>
-            <div>  
-                <input placeholder="Write Email" >
-                <button class="btn1" >Subscribe</button>
+        <section style="display: flex; flex-direction: column; background-size: cover;
+        justify-content: center; align-items: center;
+        height: 20rem; margin-top: 5rem; background-image: url(./assets/news-letter-bg.png);" >
+            <div class="heading-101" style="color: white;" >Join The Colorful Bunch</div>
+            <div id="special" >
+                <input style="flex-grow: 1; padding-left: .5rem;" placeholder="Write Email" >
+                <button style="background-color: var(--color1); color: white;" >Subscribe</button>
             </div>
         </section>
+
+    </body>
+</html>
+
+
+
+
+<!--
+
+
+
+        
+
+
+    
+
+
+
+        
+
+
+
+        
+
+
+        
     </main>
 
     <footer  >
@@ -190,5 +217,6 @@
         </div>
 
     </footer>
-</body>
-</html>
+
+
+-->
