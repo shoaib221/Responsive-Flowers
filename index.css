@@ -24,7 +24,7 @@
 
 html{
     font-size: 16px;
-    background-color: green;
+    background-color: rgb(255, 255, 255);
 }
 
 body {
@@ -115,9 +115,7 @@ banner {
     gap: 2rem;
 }
 
-.plant {
-    
-}
+
 
 .plant-photo {
     background-image: url(./assets/sample-flower-image.png);
@@ -160,7 +158,7 @@ banner {
     position: absolute; 
     z-index: 5; 
     /* border: 3px solid black; */
-    right: -2rem; 
+    right: 0rem; 
     top: -3rem; 
     width: 7rem; 
     height: 7rem;
@@ -173,8 +171,7 @@ banner {
     flex-grow: 1; 
     position: relative;
     background-size: cover;
-    
-    
+    background-image: url(./assets/flower-store.png);
 }
 
 #lover-photo img {
@@ -224,6 +221,9 @@ banner {
 footer {
     display: flex; 
     margin-top: 5rem;
+    gap: 1rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
 }
 
 .small-deal {
@@ -239,7 +239,8 @@ footer {
 }
 
 section #special {
-    width: 700px;
+    width: 95%;
+    max-width: 700px;
     height: 50px;
     display: flex;
 }
@@ -248,12 +249,26 @@ section button {
     width: 100px;
 }
 
-/* ##################### Mobile ################################ */
+#logo-footer {
+    flex-grow: 1; 
+    max-width: 40%;
+}
+
+#small-deal-special {
+    font-size: 2rem;
+}
+
+
+/*###################### Mobile ########################################################
+##################################################################################### */
+
+
+
 
 @media screen and (max-width : 800px) {
 
     section #special {
-    width: 240px;
+    
     height: 40px;
     }   
 
@@ -295,12 +310,9 @@ section button {
     }
 
     #lover-photo {
-    
         height: 25rem;
-        max-width: 90%;
-        
+        max-width: 100%;
         position: relative;
-        
     }
 
     #lover-photo img {
@@ -316,9 +328,19 @@ section button {
 
     #grid1 {
         grid-template-areas: "leftup" 'leftdown' 'right';
+        height: 40rem;
     }
 
     footer {
         flex-direction: column;
+    }
+
+    #logo-footer {
+     
+        max-width: 100%;
+    }
+
+    #small-deal-special {
+        font-size: 1.5rem;
     }
 }
