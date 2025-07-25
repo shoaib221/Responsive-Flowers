@@ -309,6 +309,10 @@ section button {
         flex-direction: column;
     }
 
+    #trust {
+        display: none;
+    }
+
     #lover-photo {
         height: 25rem;
         max-width: 100%;
