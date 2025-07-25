@@ -185,6 +185,7 @@ banner {
     position: relative;
     background-size: cover;
     background-image: url(./assets/flower-store.png);
+    background-position: center;
 }
 
 #lover-photo img {
@@ -281,9 +282,8 @@ section button {
 @media screen and (max-width : 800px) {
 
     section #special {
-    
-    height: 40px;
-    }   
+        height: 40px;
+    }
 
     header, section.regular{
         margin-left: 1rem;
@@ -330,6 +330,7 @@ section button {
         height: 25rem;
         max-width: 100%;
         position: relative;
+        
     }
 
     #lover-photo img {
